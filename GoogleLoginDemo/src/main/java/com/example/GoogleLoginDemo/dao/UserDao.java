@@ -25,9 +25,9 @@ public class UserDao {
 
 	public int save(OAuth2User principal) {
 		
-		String sql = "insert into userlogin(name,emailid) values('" + principal.getAttribute("name") + "','" + principal.getAttribute("email") + "')";
+		String sql = "insert into userlogin(name,emailid,token) values('" + principal.getAttribute("name") + "','" + principal.getAttribute("email") + "','"+principal.getAttribute("access_token")+"')";
 		return template.update(sql);
-	
+																																													
 	}
 	
 	public UserDetail getUserByEmail(String email) {

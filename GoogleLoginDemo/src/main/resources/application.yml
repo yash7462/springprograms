@@ -3,9 +3,21 @@ spring:
     oauth2:
       client:
         registration:
-          github:
-            client-id: your-github-client-id
-            client-secret: your-github-client-secret
           google:
-            client-id: 936183283854-jhn2dj4ib9f90cimv74uitm2097mkutn.apps.googleusercontent.com
-            client-secret: iRDNZScKIO2FGKzAypq9dQef
+            client-id: 936183283854-f6bsspvaihaphmlefagfqpnkml2c6tp9.apps.googleusercontent.com
+            client-secret: bSgMfg7qATnfUa3M_GbSFvD4
+          facebook:
+            client-id: 507973110157053
+            client-secret: 5d0aa62b6d31cda214357aab28fdb495
+        provider:
+            facebook:
+              authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
+              tokenUri: https://graph.facebook.com/v3.0/oauth/access_token
+              userInfoUri: https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)
+            google:
+              authorization-uri: https://accounts.google.com/o/oauth2/auth
+              token-uri:  https://www.googleapis.com/oauth2/v4/token
+              user-info-authentication-method: query
+              user-info-uri: https://www.googleapis.com/userinfo/v2/me
+              
+           

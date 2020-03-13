@@ -7,7 +7,10 @@
 <title>welcome</title>
 </head>
 <body>
-<center><a href="showinformation">show information</a></center>
+<center><a href="adddata">add user data</a></center>
+<br>
+<br>
+<center><a href="logout ">logout</a></center>
 
 </body>
 </html>

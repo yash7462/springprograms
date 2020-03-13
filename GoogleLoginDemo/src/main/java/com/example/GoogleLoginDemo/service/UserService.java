@@ -19,18 +19,14 @@ public class UserService {
 	 * @return
 	 */
 	public int save(OAuth2User principal) {
-		return dao.save(principal);		
-		
-	}
-	public Object getUserByEmail(String email) {
-		if(dao.getUserByEmail(email) != null) {
-            return dao.getUserByEmail(email);
+		/*if(dao.getUserByEmail(principal.getAttribute("email")) != null) {
+            return 0;
 		}
-		else {
-			return null;
-
-		} 
+		else {*/
+			return dao.save(principal);		
+		}	
 	
-	}
+	
+	
 
 }
